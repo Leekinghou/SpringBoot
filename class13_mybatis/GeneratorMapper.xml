@@ -15,7 +15,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/spingboot"
                         userId="root"
-                        password="root123">
+                        password="123456">
         </jdbcConnection>
 
         <!-- 生成 model 类，targetPackage 指定 model 类的包名， targetProject 指定 生成的 model 放在 idea 的哪个工程下面-->
