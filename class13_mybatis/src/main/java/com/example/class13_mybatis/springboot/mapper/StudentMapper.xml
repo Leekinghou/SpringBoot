@@ -22,7 +22,6 @@
 --     引用上面的sql语句
     select
     <include refid="Base_Column_List" />
-
     from t_student
     where id = #{id,jdbcType=INTEGER}
   </select>
