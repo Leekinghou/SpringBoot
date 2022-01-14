@@ -7,7 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JVM" />
+        <module name="demo" />
+        <module name="class13_mybatis" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="class_mybatis" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
