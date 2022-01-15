@@ -10,6 +10,7 @@
         <module name="class13_mybatis" />
         <module name="class14_mybatis" />
         <module name="demo" />
+        <module name="class15" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
