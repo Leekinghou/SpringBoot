@@ -1,9 +1,9 @@
-package com.example.class13_mybatis.springboot.mapper;
+package com.example.class14_mybatis.springboot.mapper;
 
-import com.example.class13_mybatis.springboot.model.Student;
+import com.example.class14_mybatis.springboot.model.Student;
 import org.apache.ibatis.annotations.Mapper;
 
-//@Mapper //Dao扫描接口提供给Spring容器
+@Mapper
 public interface StudentMapper {
     int deleteByPrimaryKey(Integer id);
 

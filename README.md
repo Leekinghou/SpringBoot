@@ -162,6 +162,11 @@ web层提供服务需要实现一个路由，提供服务的接口对象来自�
 - 需要添加@Mapper注入  
   ![](https://gitee.com/leekinghou/image/raw/master/img/20220114201728.png)
 
+但是如果有多个DAO接口java文件时，一个一个添加@Mapper很麻烦，可以在Application入口处添加@MapperScan()替代
+`@MapperScan("com.example.class13_mybatis.springboot.mapper") //开启扫描Mapper接口的包以及子目录`
+（使用copy reference避免写错）
+![](https://gitee.com/leekinghou/image/raw/master/img/20220114234746.png)
+
 1. 在pom.xml中添加绑定信息
 
 idea规定：java文件就在java目录里面，resource文件就在resource里面  
