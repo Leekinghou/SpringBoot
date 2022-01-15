@@ -5,6 +5,7 @@
 - [class11](#class11) 获取application.properties中的自定义配置
 - [class12](#class12) springboot使用jsp
 - [class13](#class13) springboot-mybatis逆向工程
+- [class14](#class14) 同class13，但java文件放在java目录，配置文件放在resources目录
 # class08
 ##  工程简介
 使用springboot框架的核心配置文件application.properties
@@ -195,3 +196,10 @@ useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GM
 spring.datasource.username=root
 spring.datasource.password=123456
 ```
+
+# class14
+## 工程简介
+同Class13，但是配置文件分离，放在resources目录
+![](https://gitee.com/leekinghou/image/raw/master/img/20220115135932.png)
+
+
