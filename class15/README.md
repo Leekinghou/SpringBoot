@@ -1,5 +1,8 @@
 ## 工程简介  
-当返回的结果都是JSON类型时  
+- 各种注解的意义及使用场景
+- 如何实现RESTful风格
+
+- 当返回的结果都是JSON类型时  
 ```java
 @Controller
 public class StudentController {

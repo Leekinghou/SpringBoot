@@ -205,7 +205,10 @@ spring.datasource.password=123456
 
 # class15
 ## 工程简介
-当返回的结果都是JSON类型时
+- 各种注解的意义及使用场景
+- 如何实现RESTful风格
+
+- 当返回的结果都是JSON类型时
 ```java
 @Controller
 public class StudentController {
@@ -309,7 +312,7 @@ public class StudentController {
 }
 ```
 
-## RESTful风格 @PathVariable
+## RESTful风格
 ```java
 @PostMapping(value = "/student/{id}/{name}/{age}")
 public Object addStudent(@PathVariable("id") Integer id,
@@ -330,3 +333,4 @@ public Object addStudent(@PathVariable("id") Integer id,
     return retMap;
 }
 ```
+
