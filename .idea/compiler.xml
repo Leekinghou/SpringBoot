@@ -11,6 +11,7 @@
         <module name="class14_mybatis" />
         <module name="demo" />
         <module name="class15" />
+        <module name="class16springbootRedis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

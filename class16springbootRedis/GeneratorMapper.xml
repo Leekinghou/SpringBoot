@@ -19,7 +19,7 @@
         </jdbcConnection>
 
         <!-- 生成 model 类，targetPackage 指定 model 类的包名， targetProject 指定 生成的 model 放在 idea 的哪个工程下面-->
-        <javaModelGenerator targetPackage="com.class15.springboot.model"
+        <javaModelGenerator targetPackage="com.class16.springboot.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
             <property name="trimStrings" value="false" />
@@ -27,7 +27,7 @@
 
         <!-- 生成 MyBatis 的 Mapper.xml 文件，targetPackage 指定 mapper.xml 文件的 包名，
          targetProject 指定生成的 mapper.xml 放在 idea 的哪个工程下面 -->
-        <sqlMapGenerator targetPackage="com.class15.springboot.mapper"
+        <sqlMapGenerator targetPackage="com.class16.springboot.mapper"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
         </sqlMapGenerator>
@@ -35,7 +35,7 @@
         <!-- 生成 MyBatis 的 Mapper 接口类文件,targetPackage 指定 Mapper 接口类的包 名，
         targetProject 指定生成的 Mapper 接口放在 idea 的哪个工程下面 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.class15.springboot.mapper" targetProject="src/main/java">
+                             targetPackage="com.class16.springboot.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
