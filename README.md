@@ -7,6 +7,8 @@
 - [class13](#class13) springboot-mybatis逆向工程
 - [class14](#class14) 同class13，但java文件放在java目录，配置文件放在resources目录
 - [class15](#class15) 常用的注解以及RESTful风格
+- [class16](#class16) springboot集成redis
+
 # class08
 ##  工程简介
 使用springboot框架的核心配置文件application.properties
@@ -204,9 +206,14 @@ spring.datasource.password=123456
 ![](https://gitee.com/leekinghou/image/raw/master/img/20220115135932.png)
 
 # class15
+
+Springboot项目下使用事务
+   - 事务是一个完整的功能，也叫做一个完整的业务
+   - 事务只跟`DML` SQL语句有关，包括增删改
+
 ## 工程简介
-- 各种注解的意义及使用场景
-- 如何实现RESTful风格
+1. springbmvc中各种注解的意义及使用场景
+2. 如何实现RESTful风格
 
 - 当返回的结果都是JSON类型时
 ```java
@@ -333,4 +340,45 @@ public Object addStudent(@PathVariable("id") Integer id,
     return retMap;
 }
 ```
+# class16
+## 工程简介
+1. 添加操作redis数据类型的依赖
+2. 在springboot核心配置文件中添加redis的配置
 
+
+## 添加依赖
+```xml
+<!--springboot集成redis的起步依赖-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+```
+
+## 添加application.properties
+```java
+# 设置redis配置信息
+spring.redis.host=localhost
+spring.redis.port=6379
+spring.redis.password=
+```
+
+## 业务层代码
+- `private RedisTemplate<Object, Object> redisTemplate;`
+- `opsForValue()`操作string类型
+```java
+@Service
+public class StudentServiceImpl implements StudentService {
+    /**
+     * 操作redis的模版对象，由redis提供
+     */
+    @Autowired
+    private RedisTemplate<Object, Object> redisTemplate;
+
+    @Override
+    public void put(String key, String value) {
+        // opsForValue()操作string类型
+        redisTemplate.opsForValue().set(key, value);
+    }
+}
+```
